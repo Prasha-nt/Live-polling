@@ -27,8 +27,8 @@ export type ChatMessage = {
 };
 
 // Use environment variable for the socket server URL, fallback to the deployed Render URL
-// const SOCKET_SERVER_URL = import.meta.env.VITE_SOCKET_SERVER_URL || 'https://livepolling-gpjh.onrender.com';
-const SOCKET_SERVER_URL = import.meta.env.VITE_SOCKET_SERVER_URL ;
+
+const SOCKET_SERVER_URL = import.meta.env.VITE_SOCKET_SERVER_URL  ;
 
 class SocketService {
   private socket: Socket | null = null;

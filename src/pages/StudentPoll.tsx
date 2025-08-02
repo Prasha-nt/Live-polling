@@ -219,7 +219,7 @@ const StudentPoll = () => {
       <div className="min-h-screen flex items-center justify-center px-4 py-8">
         <div className="text-center">
           <div className="bg-[#7765DA] rounded-full px-6 py-2.5 flex items-center gap-2 mb-6 mx-auto w-fit">
-            <BsStopwatch className="text-white" />
+            <BsStars className="text-white" />
             <span className="text-white font-medium">
               Intervue Poll
             </span>
@@ -453,3 +453,4 @@ const StudentPoll = () => {
 };
 
 export default StudentPoll;
+
