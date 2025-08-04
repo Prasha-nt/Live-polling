@@ -222,8 +222,15 @@ const StudentPoll = () => {
             <BsStars className="text-white" />
             <span className="text-white font-medium">
               Intervue Poll
-            </span>
+            </span>            
           </div>
+          {/* Spinner */}
+        <div className="flex justify-center mb-4">
+          <div
+            className="h-9 w-9 border-6 border-[#7765DA] border-t-transparent rounded-full animate-spin"
+            role="status"
+          ></div>
+        </div>
           <h2 className="text-2xl font-semibold mb-4">Waiting for teacher to start a poll...</h2>
           <p className="text-[#6E6E6E]">You're logged in as <span className="font-semibold">{studentName}</span></p>
         </div>
@@ -387,7 +394,7 @@ const StudentPoll = () => {
         )}
         
         {/* Wait Message when no polls */}
-        {!currentPoll && (
+        {/* {!currentPoll && (
           <div className="mt-12 text-center bg-white rounded-xl border border-[#D9D9D9] p-8 shadow-sm">
             <div className="flex flex-col items-center justify-center">
               <div className="w-16 h-16 bg-[#7765DA] bg-opacity-10 rounded-full flex items-center justify-center mb-4">
@@ -397,7 +404,42 @@ const StudentPoll = () => {
               <p className="text-gray-600">Waiting for the teacher to start a new poll...</p>
             </div>
           </div>
-        )}
+        )} */}
+
+
+{!currentPoll && (
+  <div className="mt-12 text-center">
+    {/* Header */}
+    <div className="bg-[#7765DA] rounded-full px-6 py-2.5 flex items-center gap-2 mb-6 mx-auto w-fit">
+      <BsStars className="text-white" />
+      <span className="text-white font-medium">Intervue Poll</span>
+    </div>
+
+    {/* Spinner */}
+    <div className="flex justify-center mb-6">
+      <div
+        className="h-9 w-9 border-6 border-[#7765DA] border-t-transparent rounded-full animate-spin"
+        role="status"
+      ></div>
+    </div>
+
+    {/* No Active Poll Message */}
+    <div className="bg-white rounded-xl border border-[#D9D9D9] p-8 shadow-sm inline-block">
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-16 h-16 bg-[#7765DA] bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+          <BsStopwatch className="text-[#7765DA] text-2xl" />
+        </div>
+        <h3 className="text-xl font-semibold mb-2">No Active Polls</h3>
+        <p className="text-gray-600">
+          Waiting for the teacher to start a new poll...
+        </p>
+        <p className="text-sm text-gray-500 mt-2">
+          You're logged in as <span className="font-semibold">{studentName}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+)}
       </div>
       
       {/* Chat/Participants Button */}
