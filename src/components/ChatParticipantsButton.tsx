@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BsChatDots, BsPeople, BsSend } from "react-icons/bs";
+import { BsChatDots, BsChatRight, BsSend } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 import socketService from '../services/socketService';
 import type { ChatMessage } from '../services/socketService';
@@ -85,7 +85,7 @@ const ChatParticipantsButton = ({ students = [], isTeacher = false, userName = '
         {activeTab === 'chat' ? (
           <BsChatDots className="text-xl sm:text-2xl" />
         ) : (
-          <BsPeople className="text-xl sm:text-2xl" />
+          <BsChatRight className="text-xl sm:text-2xl" />
         )}
       </button>
 
